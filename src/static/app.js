@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
               const activityName = decodeURIComponent(icon.getAttribute('data-activity'));
               const email = decodeURIComponent(icon.getAttribute('data-email'));
               try {
-                const response = await fetch(`/activities/${encodeURIComponent(activityName)}/signup?email=${encodeURIComponent(email)}`, {
+                const response = await fetch(`/activities/${encodeURIComponent(activityName)}/participants?email=${encodeURIComponent(email)}`, {
                   method: 'DELETE',
                 });
                 if (response.ok) {
